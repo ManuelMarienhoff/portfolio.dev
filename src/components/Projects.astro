@@ -1,17 +1,51 @@
 ---
 import GitHub from "./icons/GitHub.astro"
-import JavaScript from "./icons/JavaScript.astro"
 import LinkButton from "./LinkButton.astro"
+
+const TAGS = [
+  {
+    name: "Node.js",
+    class: "bg-green-500/20 text-green-100"
+  },
+  {
+    name: "Express",
+    class: "bg-gray-400/20 text-gray-100"
+  },
+    {
+    name: "HTML",
+    class: "bg-orange-500/20 text-orange-200"
+  },
+    {
+    name: "CSS",
+    class: "bg-sky-500/20 text-sky-100"
+  },
+    {
+    name: "JavaScript",
+    class: "bg-yellow-400/20 text-yellow-100"
+  },
+    {
+    name: "MySql",
+    class: "bg-sky-500/20 text-sky-100"
+  },
+    {
+    name: "Sequelize",
+    class: "bg-sky-500/20 text-sky-100"
+  },
+    {
+    name: "React",
+    class: "bg-cyan-500/20 text-cyan-100"
+  },
+]
 
 const PROJECTS = [
   {
     title: "CleanWave - Ecommerce con venta al por mayor y menor ",
     description:
-      "Ecommerce que comercializa productos de limpieza a clientes mayoristas y consumidores finales, ofreciendo diferentes precios y ofertas en base al tipo de usuario que sean. CRUD de usuarios y productos. Carrito de compras. 4 tipos de usuarios: ['SuperAdmin', 'Admin', 'Mayorista', 'ConsumidorFinal']",
-    link: "https://svgl.vercel.app/",
+      "Ecommerce que ofrece productos de limpieza a clientes mayoristas y consumidores finales, haciendo una diferenciación en interfaz, precios y ofertas según el tipo de usuario.",
+    link: "https://cleanwave-ecommerce-production.up.railway.app/consumidorfinal",
     github: "https://github.com/ManuelMarienhoff/CleanWave---Ecommerce",
     image: "/projects/cleanWave.webp",
-    tags: ["Node.js", "Express", "HTML", "CSS", "JavaScript", "MySql", "Sequelize", "React"],
+    tags: TAGS,
   },
 ]
 ---
@@ -23,9 +57,9 @@ const PROJECTS = [
           {title}
         </h3>
         <p class="text-lg mb-4 text-white text-pretty">{description}</p>
-        <div class="mt-2 inline-flex flex-wrap gap-1">
+        <div class="mt-2 inline-flex flex-wrap gap-1 ">
             {tags.map((tag) => (
-                <span class="bg-gray-400/20 text-gray-100 text-s mb-3 p-1 rounded-md ">{tag}</span>
+                <span class={`text-xs mb-2 p-1 rounded-md ${tag.class}`}>{tag.name}</span>
             ))}
         </div>
         <img
@@ -41,7 +75,7 @@ const PROJECTS = [
               Ver código fuente
             </LinkButton>
           )}
-          <LinkButton href={link}>
+          <LinkButton target="_blank" href={link}>
             <svg
               width="24"
               height="24"
