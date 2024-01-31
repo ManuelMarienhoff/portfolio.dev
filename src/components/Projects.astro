@@ -39,7 +39,7 @@ const TAGS = [
 
 const PROJECTS = [
   {
-    title: "CleanWave - Ecommerce con venta al por mayor y menor ",
+    title: "CleanWave - Ecommerce con venta al por mayor y al por menor ",
     description:
       "Ecommerce que ofrece productos de limpieza a clientes mayoristas y consumidores finales, haciendo una diferenciación en interfaz, precios y ofertas según el tipo de usuario.",
     link: "https://cleanwave-ecommerce-production.up.railway.app/consumidorfinal",
@@ -56,7 +56,7 @@ const PROJECTS = [
         <h3 class="text-2xl font-semibold text-yellow-400 dark:text-yellow-200 mb-2">
           {title}
         </h3>
-        <p class="text-lg mb-4 text-white text-pretty">{description}</p>
+        <p class="text-lg mb-4 text-white/85 text-pretty">{description}</p>
         <div class="mt-2 inline-flex flex-wrap gap-1 ">
             {tags.map((tag) => (
                 <span class={`text-xs mb-2 p-1 rounded-md ${tag.class}`}>{tag.name}</span>
