@@ -18,57 +18,10 @@ const { description, title } = Astro.props
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> <!-- ACA PONER OTRA COSA NI IDEA -->
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <style>
-    .carousel {
-      position: relative;
-      max-width: 600px;
-      margin: auto;
-      overflow: hidden;
-    }
-
-    .carousel img {
-      width: 100%;
-      display: none;
-    }
-
-    .flecha {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 24px;
-      cursor: pointer;
-    }
-
-    .flecha-izquierda {
-      left: 10px;
-    }
-
-    .flecha-derecha {
-      right: 10px;
-    }
-
-    .indicadores {
-      text-align: center;
-      margin-top: 10px;
-    }
-
-    .indicador {
-      display: inline-block;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background-color: #888;
-      margin: 0 8px;
-      cursor: pointer;
-    }
-
-    .activo {
-      background-color: #333;
-    }
-  </style>
+    
   </head>
 
   <body class="relative text-black dark:text-white">

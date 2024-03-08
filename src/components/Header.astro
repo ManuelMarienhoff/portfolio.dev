@@ -2,15 +2,18 @@
 ---
 const navItems = [
   {
-    title: 'Proyectos',
+    spanishTitle: 'Proyectos',
+    englishTitle: 'Projects',
     url: '/#proyectos'
   },
   {
-    title: 'Sobre mí',
+    spanishTitle: 'Sobre mí',
+    englishTitle: 'About Me',
     url: '/#sobre-mi'
   },
   {
-    title: 'Contacto',
+    spanishTitle: 'Contacto',
+    englishTitle: 'Contact',
     url: '/#contacto'
   },
 ]
@@ -38,10 +41,22 @@ const navItems = [
   >
   {navItems.map(link => (
     <a
-      class="hover:bg-white/10 rounded-full px-2 sm:px-3 transition text-sm sm:text-base"
-      href={link.url}>{link.title}</a
+      class="hover:bg-white/10 rounded-full px-2 sm:px-3 transition text-sm sm:text-base spanish"
+      href={link.url}>{link.spanishTitle}</a
+    >
+        <a
+      class="hover:bg-white/10 rounded-full px-2 sm:px-3 transition text-sm sm:text-base english hidden"
+      href={link.url}>{link.englishTitle}</a
     >
   ))}
+    <button id="languageButton" type="button" class="hover:bg-white/10 rounded-full px-2 sm:px-3 transition text-sm sm:text-base text-white  english top-20">
+      <span class="spanish">
+        EN <span class="fi fi-gb"></span>
+      </span>
+      <span class="english hidden">
+        ES <span class="fi fi-es"></span>
+      </span>
+    </button>
   </nav>
 </header>
   

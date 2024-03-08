@@ -16,35 +16,38 @@ import Gizmo from "../components/icons/ProjectIcon.astro"
 import Download from "../components/icons/Download.astro"
 import ContactIcon from "../components/icons/ContactIcon.astro"
 import ContactForm from "../components/ContactForm.astro"
+import "/node_modules/flag-icons/css/flag-icons.min.css";
 
 ---
-<script type="module" src="../Script.js"/>
+<script src="../TranslateScript.js"/>
 
 <Layout
   title="Porfolio de Manuel Marienhoff - Desarrollador y Programador Web"
-  description="Contrata a Manuel para crear tu aplicación web o móvil. Desarrollador Web y Creador de Contenido. Especializado en crear aplicaciones únicas."
+  description="Contrata a Manuel para crear tu aplicación web o móvil. Desarrollador Web."
 >
-  <main class="px-4">
+
+
+<main class="px-4">
     <SectionContainer class="py-44 pb-32 mb-2">
       <h1
         class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
       >
-        Hola, soy Manuel <a
-          href="https://www.linkedin.com/in/manuel-marienhoff-6bb1422b0/"
+      <span class="spanish">Hola, soy Manuel</span> <span class="english hidden">Hey! I'm Manuel</span> <a
+      href="https://www.linkedin.com/in/manuel-marienhoff-6bb1422b0/"
           target="_blank"
           rel="noopener"
           class="flex justify-center items-center hover:scale-105 transition"
         >
-          <Badge>Disponible para trabajar</Badge>
+          <Badge><span class="spanish">Disponible para trabajar</span> <span class="english hidden">Open to work</span></Badge>
         </a>
       </h1>
       <h2
         class="text-yellow-400 text-xl lg:text-2xl text-balance max-w-[700px]"
       >
-        <span>Desarrollador Web Full Stack.</span>
-        <span class="text-white/60">
+        <span class="spanish">Desarrollador Web Full Stack.</span>
+        <span class="text-white/60 spanish">
           De Buenos Aires, Argentina.</span
-        >
+        > <span class="english hidden">Full Stack Developer.</span> <span class=" text-white/60 english hidden">Buenos Aires, Argentina</span>
 
       </h2>
 
@@ -62,7 +65,10 @@ import ContactForm from "../components/ContactForm.astro"
           manuelmarienhoff1@gmail.com
         </SocialPill>
         <SocialPill href="/CV-MANUEL-MARIENHOFF.pdf" download="CV-MANUEL-MARIENHOFF.pdf">
-          Descargar CV
+          <span class="spanish">
+            Descargar CV
+          </span>
+          <span class="english hidden">Download CV</span>
           <Download class="size-4 md:size-6" />
         </SocialPill>
       </nav>
@@ -73,7 +79,10 @@ import ContactForm from "../components/ContactForm.astro"
         class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-white"
       >
         <CodeIcon class="size-7" />
-        Proyectos
+        <span class="spanish">
+          Proyectos
+        </span>
+        <span class="english hidden">Projects</span>
       </h2>
       <Projects />
     </SectionContainer>
@@ -83,7 +92,10 @@ import ContactForm from "../components/ContactForm.astro"
       class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-white"
       >
       <ProfileCheck class="size-7" />
-      Sobre mi
+      <span class="spanish">
+      Sobre mi</span>
+        <span class="english hidden">About Me</span>
+
     </h2>
     <AboutMe />
     </SectionContainer>
@@ -91,14 +103,19 @@ import ContactForm from "../components/ContactForm.astro"
       <h2
       class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-white"
       >
-      <ContactIcon class="size-7"/>Contacto
+      <ContactIcon class="size-7"/><span class="spanish">Contacto</span>
+        <span class="english hidden">Contact</span>
+
       </h2>
-      <h4 class="text-white/85 mb-8">Contáctame directamente a <a class="underline text-yellow-400/90 font-semibold" href="mailto:manuelmarienhoff1@gmail.com">manuelmarienhoff1@gmail.com</a> o mediante el siguiente formulario.</h4>
+      <h4 class="text-white/85 mb-8"><span class="spanish">Contáctame directamente a </span><span class="english hidden">Contact me directly to </span><a class="underline text-yellow-400/90 font-semibold" href="mailto:manuelmarienhoff1@gmail.com">manuelmarienhoff1@gmail.com</a> <span class="spanish">o mediante el siguiente formulario.</span><span class="english hidden"> or through the form below.</span></h4>
       <ContactForm/>
     </SectionContainer>
     
     <SectionContainer id="tecnologias">
-      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-white"><Gizmo class="size-4 md:size-6" />Tecnologías</h2>
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-white"><Gizmo class="size-4 md:size-6" />
+        <span class="spanish">Tecnologías</span>
+        <span class="english hidden">Technologies</span>
+      </h2>
       <Technologies/>
     </SectionContainer>
     
