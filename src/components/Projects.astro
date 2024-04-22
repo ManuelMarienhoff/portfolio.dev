@@ -2,7 +2,7 @@
 import GitHub from "./icons/GitHub.astro"
 import LinkButton from "./LinkButton.astro"
 
-const TAGS = [
+const TAGScleanwave = [
   {
     name: "Node.js",
     class: "bg-green-500/20 text-green-100"
@@ -37,6 +37,19 @@ const TAGS = [
   },
 ]
 
+const TAGSwordle = [
+      {
+    name: "React",
+    class: "bg-cyan-500/20 text-cyan-100"
+  },    {
+    name: "Vite",
+    class: "bg-purple-500/20 text-purple-100"
+  },    {
+    name: "JavaScript",
+    class: "bg-yellow-400/20 text-yellow-100"
+  },
+]
+
 const PROJECTS = [
   {
     spanishTitle: "CleanWave - Ecommerce con venta al por mayor y al por menor",
@@ -47,8 +60,19 @@ const PROJECTS = [
     link: "https://cleanwave-ecommerce-production.up.railway.app/consumidorfinal",
     github: "https://github.com/ManuelMarienhoff/CleanWave---Ecommerce",
     image: "/projects/cleanWave.webp",
-    tags: TAGS,
+    tags: TAGScleanwave,
   },
+  {
+    spanishTitle: "Clon de Wordle",
+    englishTiTle: "Wordle Clone",
+    spanishDescription:
+      "Replica del juego Wordle desarrollado con React. ¿Puedes adivinar a palabra?",
+    englishDescription: "Wordle clone made with React. ¿Can you guess the word?",
+    link: "https://mywordguesser.netlify.app/",
+    github: "https://github.com/ManuelMarienhoff/myWordGuesser",
+    image: "/projects/wordle.png",
+    tags: TAGSwordle,
+  }
 ]
 ---
 <section class="flex flex-col gap-y-16">
