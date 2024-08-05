@@ -50,8 +50,7 @@ const TAGSwordle = [
   },
 ]
 
-const PROJECTS = [
-  {
+const cleanwave =   {
     spanishTitle: "CleanWave - Ecommerce con venta al por mayor y al por menor",
     englishTiTle: 'CleanWave - Ecommerce with wholesale and retail sales',
     spanishDescription:
@@ -61,7 +60,10 @@ const PROJECTS = [
     github: "https://github.com/ManuelMarienhoff/CleanWave---Ecommerce",
     image: "/projects/cleanWave.webp",
     tags: TAGScleanwave,
-  },
+  }
+
+const PROJECTS = [
+
   {
     spanishTitle: "Clon de Wordle",
     englishTiTle: "Wordle Clone",
@@ -76,6 +78,34 @@ const PROJECTS = [
 ]
 ---
 <section class="flex flex-col gap-y-16">
+  <article>
+    <h3 class="text-2xl font-semibold text-yellow-400 dark:text-yellow-200 mb-2"><span class="spanish">{cleanwave.spanishTitle}</span><span class="english hidden">{cleanwave.englishTiTle}</span>
+    </h3>
+    <p class="text-lg mb-4 text-white/85 text-pretty"><span class="spanish">{cleanwave.spanishDescription}</span><span class="english hidden">{cleanwave.englishDescription}</span></p>
+    <div class="mt-2 inline-flex flex-wrap gap-1 ">
+      {cleanwave.tags.map((tag) => (
+          <span class={`text-xs mb-2 p-1 rounded-md ${tag.class}`}>{tag.name}</span>
+      ))}
+  </div>
+  <img
+          loading="lazy"
+          class="rounded shadow-2xl shadow-white/10 aspect-video"
+          src={cleanwave.image}
+          alt={`Captura de pantalla del proyecto ${cleanwave.image}`}
+        />
+        <footer class="flex gap-x-4 items-end justify-start mt-4 text-white">
+          {cleanwave.github && (
+            <LinkButton href={cleanwave.github}>
+              <GitHub class="size-6" />
+              <span class="spanish">
+              Ver código fuente</span><span class="english hidden">View Code</span>
+            </LinkButton>
+          )}
+          </footer>
+  </article>
+
+
+  
   {
     PROJECTS.map(({ image, spanishTitle, englishTiTle, spanishDescription,englishDescription, tags, link, github }) => (
       <article>
