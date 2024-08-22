@@ -1,0 +1,46 @@
+---
+const { phoneNumber = '5491136214830' } = Astro.props;
+const messageSpanish = 'Hola Manuel, vi tu portfolio y me gustaría hablar contigo.';
+const messageEnglish = 'Hi Manuel, I saw your portfolio and would like to talk with you.';
+---
+
+<style>
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+}
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none; 
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+</style>
+
+<a href={`https://wa.me/${phoneNumber}?text=${messageEnglish}`} class="whatsapp-float english hidden" target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<a href={`https://wa.me/${phoneNumber}?text=${messageSpanish}`} class="whatsapp-float spanish " target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" defer></script>
