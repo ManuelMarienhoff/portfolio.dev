@@ -6,6 +6,7 @@ const inputSubject = document.querySelector('#asunto');
 const inputMessage = document.querySelector('#mensaje');
 const sendEmailButton = document.querySelector('#sendEmail');
 const whatsappLinks = document.querySelectorAll('.whatsapp-float')
+const cvButton = document.querySelector('#cvButton')
 
 button.addEventListener('click', () => {
   /* Traduce a ingles */
@@ -31,6 +32,9 @@ button.addEventListener('click', () => {
       }
     });
 
+    cvButton.href = "/CV-MANUEL-MARIENHOFF-en.pdf";
+    cvButton.download = "CV-MANUEL-MARIENHOFF-en.pdf";
+
     button.classList.add('spanish');
     button.classList.remove('english');
     /* Traduce a español */
@@ -55,6 +59,9 @@ button.addEventListener('click', () => {
         link.classList.add('hidden');
       }
     });
+
+    cvButton.href = "/CV-MANUEL-MARIENHOFF.pdf";
+    cvButton.download = "CV-MANUEL-MARIENHOFF.pdf";
 
     button.classList.add('english');
     button.classList.remove('hidden');
