@@ -12,6 +12,7 @@ const TAGS = {
   Sequelize: { name: "Sequelize", class: "bg-sky-500/20 text-sky-100" },
   React: { name: "React", class: "bg-cyan-500/20 text-cyan-100" },
   Vite: { name: "Vite", class: "bg-purple-500/20 text-purple-100" },
+  MongoDB : {name: "MongoDB", class:"bg-green-500/20 text-green-100"}
 };
 
 const projects = [
@@ -36,6 +37,17 @@ const projects = [
     image: "/projects/wordle.png",
     tags: [TAGS.React, TAGS.Vite, TAGS.JavaScript],
   },
+  {
+    spanishTitle: "Chat en Tiempo Real",
+  englishTitle: "Live Chat",
+  spanishDescription: "Aplicación de chat en tiempo real desarrollada con JavaScript, Node.js y WebSocket. Los mensajes se almacenan de manera segura en una base de datos MongoDB para asegurar la persistencia y la fiabilidad de la conversación.",
+  englishDescription: "Real-time chat application built with JavaScript, Node.js, and WebSocket. Messages are securely stored in a MongoDB database, ensuring persistence and reliability of conversations.",
+  link: "https://chatjs-9tmv.onrender.com/",
+  github: "https://github.com/ManuelMarienhoff/ChatJs",
+  image: "/projects/chatJs.png",
+  tags: [TAGS.JavaScript, TAGS.NodeJS, TAGS.MongoDB],
+
+  }
 ];
 
 ---
