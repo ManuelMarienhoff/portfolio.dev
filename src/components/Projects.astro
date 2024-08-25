@@ -18,7 +18,7 @@ const TAGS = {
 const projects = [
   {
     spanishTitle: "CleanWave - Ecommerce con venta al por mayor y al por menor",
-    englishTiTle: 'CleanWave - Ecommerce with wholesale and retail sales',
+    englishTitle: 'CleanWave - Ecommerce with wholesale and retail sales',
     spanishDescription:
       "Ecommerce que ofrece productos de limpieza a clientes mayoristas y consumidores finales, haciendo una diferenciación en interfaz, precios y ofertas según el tipo de usuario.",
     englishDescription: "E-commerce that offers cleaning products to wholesale clients and end consumers, making a differentiation in interface, prices, and offers according to the type of user.",
@@ -29,7 +29,7 @@ const projects = [
   },
   {
     spanishTitle: "Clon de Wordle",
-    englishTiTle: "Wordle Clone",
+    englishTitle: "Wordle Clone",
     spanishDescription: "Replica del juego Wordle desarrollado con React. ¿Puedes adivinar la palabra?",
     englishDescription: "Wordle clone made with React. Can you guess the word?",
     link: "https://mywordguesser.netlify.app/",
@@ -38,7 +38,7 @@ const projects = [
     tags: [TAGS.React, TAGS.Vite, TAGS.JavaScript],
   },
   {
-    spanishTitle: "Chat en Tiempo Real",
+  spanishTitle: "Chat en Tiempo Real",
   englishTitle: "Live Chat",
   spanishDescription: "Aplicación de chat en tiempo real desarrollada con JavaScript, Node.js y WebSocket. Los mensajes se almacenan de manera segura en una base de datos MongoDB para asegurar la persistencia y la fiabilidad de la conversación.",
   englishDescription: "Real-time chat application built with JavaScript, Node.js, and WebSocket. Messages are securely stored in a MongoDB database, ensuring persistence and reliability of conversations.",
@@ -46,17 +46,16 @@ const projects = [
   github: "https://github.com/ManuelMarienhoff/ChatJs",
   image: "/projects/chatJs.png",
   tags: [TAGS.JavaScript, TAGS.NodeJS, TAGS.MongoDB],
-
   }
 ];
 
 ---
 <section class="flex flex-col gap-y-16">
-  {projects.map(({ image, spanishTitle, englishTiTle, spanishDescription, englishDescription, tags, link, github }) => (
+  {projects.map(({ image, spanishTitle, englishTitle, spanishDescription, englishDescription, tags, link, github }) => (
     <article>
       <h3 class="text-2xl font-semibold text-yellow-400 dark:text-yellow-200 mb-2">
         <span class="spanish">{spanishTitle}</span>
-        <span class="english hidden">{englishTiTle}</span>
+        <span class="english hidden">{englishTitle}</span>
       </h3>
       <p class="text-lg mb-4 text-white/85 text-pretty">
         <span class="spanish">{spanishDescription}</span>
